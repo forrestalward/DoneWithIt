@@ -1,8 +1,9 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React from "react";
-import { FlatList, StyleSheet } from "react-native-web";
 import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
+import ListItemSeparator from "../components/ListItemSeparator";
+import { FlatList } from "react-native-web";
 
 const messages = [
   {
@@ -19,7 +20,7 @@ const messages = [
   },
 ];
 
-export default function MessagesScreen() {
+export default function MessagesScreen({ ItemSeperatorComponent }) {
   return (
     <View>
       <Screen>
@@ -33,6 +34,7 @@ export default function MessagesScreen() {
               image={item.image}
             />
           )}
+          ItemSeparatorComponent={ListItemSeparator}
         >
           MessagesScreen
         </FlatList>
