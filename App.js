@@ -8,5 +8,5 @@ import Card from "./app/components/Card";
 import "./app/assets/headphones.jpg";
 import ListingDetailScreen from "./app/screens/ListingDetailScreen";
 export default function App() {
-  return <ListingDetailScreen />;
+  return <ViewImageScreen />;
 }
