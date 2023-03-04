@@ -14,7 +14,13 @@ export default function ListingDetailScreen({ props }) {
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>Beats by Dr. Dre</AppText>
         <AppText style={styles.price}>$100</AppText>
-        <ListItem title={"Forrie"} subTitle={"5 Listings"}></ListItem>
+        <View style={styles.userContainer}>
+          <ListItem
+            image={require("../assets/headphones.jpg")}
+            title={"Forrie Alward Chutta Lover"}
+            subTitle={"5 Listings"}
+          ></ListItem>
+        </View>
       </View>
     </View>
   );
@@ -36,5 +42,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "500",
+  },
+  userContainer: {
+    marginTop: 20,
   },
 });
