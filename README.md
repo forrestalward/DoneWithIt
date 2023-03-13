@@ -46,6 +46,3 @@ This app was built with the following technologies:
 
 If you'd like to contribute to this app, feel free to open a pull request or submit an issue on the GitHub repository.
 
-## License
-
-This app is licensed under the MIT license. See the LICENSE file for more details.
