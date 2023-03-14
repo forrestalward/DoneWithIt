@@ -23,8 +23,9 @@ const initalMessages = [
 ];
 
 export default function MessagesScreen({ props }) {
-  // Set state for Messages
+  // Set state
   const [messages, setMessages] = useState(initalMessages);
+  const [refreshing, setRefreshing] = useState(false);
 
   // Delete Function
   const handleDelete = (message) => {
@@ -49,6 +50,17 @@ export default function MessagesScreen({ props }) {
             />
           )}
           ItemSeparatorComponent={ListItemSeparator}
+          refreshing={refreshing}
+          onRefresh={() => {
+            setMessages([
+              {
+                id: 2,
+                title: "T1",
+                description: "D1",
+                image: require("../assets/headphones.jpg"),
+              },
+            ]);
+          }}
         >
           MessagesScreen
         </FlatList>
