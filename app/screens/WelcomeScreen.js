@@ -1,6 +1,7 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
-import AppButton from "../components/AppButton";
+
+import Button from "../components/Button";
 
 function WelcomeScreen(props) {
   return (
@@ -9,38 +10,36 @@ function WelcomeScreen(props) {
       style={styles.background}
       source={require("../assets/background.jpg")}
     >
-      {/* Logo and Text */}
       <View style={styles.logoContainer}>
-        <Image source={require("../assets/logo-red.png")} style={styles.logo} />
+        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
-      {/* Login Buttons */}
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" color="primary" />
-        <AppButton title="Register" color="secondary" />
+        <Button title="Login" />
+        <Button title="Register" color="secondary" />
       </View>
     </ImageBackground>
   );
 }
+
 const styles = StyleSheet.create({
   background: {
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
   },
-
-  logoContainer: {
-    top: 70,
-    position: "absolute",
-    alignItems: "center",
+  buttonsContainer: {
+    padding: 20,
+    width: "100%",
   },
   logo: {
     width: 100,
     height: 100,
   },
-  buttonsContainer: {
-    padding: 20,
-    width: "100%",
+  logoContainer: {
+    position: "absolute",
+    top: 70,
+    alignItems: "center",
   },
   tagline: {
     fontSize: 25,
@@ -48,4 +47,5 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
 });
+
 export default WelcomeScreen;
